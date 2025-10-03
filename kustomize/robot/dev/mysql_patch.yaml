@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql 
+spec:
+  template:
+    spec:
+      containers:
+        - name: mysql
+          image: robotshop/rs-mysql-db:latest
+          resources:
+            requests:
+              cpu: 50m
+              memory: 50Mi

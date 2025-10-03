@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart
+spec:
+  template:
+    spec:
+      containers:
+        - name: cart
+          image: robotshop/rs-cart:latest
+          resources:
+            requests:
+              cpu: 50m
+              memory: 50Mi

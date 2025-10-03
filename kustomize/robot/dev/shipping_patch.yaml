@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipping
+spec:
+  template:
+    spec:
+      containers:
+        - name: shipping
+          image: robotshop/rs-shipping:latest
+          resources:
+            requests:
+              cpu: 50m
+              memory: 300Mi
